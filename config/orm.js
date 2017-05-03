@@ -9,9 +9,9 @@ var orm = {
       cb(result);
     });
   },
-  insertOne: function(table, column, values, cb) {
-    var queryString = "INSERT INTO " + table + "(" + column + ")" + "VALUES('" + [values] + "')";
-    connection.query(queryString, values, function(err, results) {
+  insertOne: function(table, name, values, cb) {
+    var queryString = "INSERT INTO " + table + "(" + name + ")" + "VALUES('" + [values] + "')";
+    connection.query(queryString, values, function(err, result) {
       if (err) throw err;
       cb(result);
     });

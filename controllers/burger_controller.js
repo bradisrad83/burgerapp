@@ -15,7 +15,7 @@ router.get("/burgers", function(request, response) {
   });
 });
 
-router.post("burgers/create", function(request, response) {
+router.post("/burgers/create", function(request, response) {
   console.log(request);
   console.log(response);
   burger.insertOne("burger_name", request.body.name, function() {
@@ -29,7 +29,7 @@ router.put("/burgers/update/devour/:id", function(request, response) {
   });
 });
 
-router.delete("burgers/delete/:id", function(request, response) {
+router.delete("/burgers/delete/:id", function(request, response) {
   burger.deleteOne("burgers", request.params.id, function() {
     response.redirect("/burgers");
   });

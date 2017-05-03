@@ -8,7 +8,7 @@ var burger = {
   },
   insertOne: function(column, name, cb) {
     orm.insertOne("burgers", column, name, function(data) {
-      console.log(data);
+      //console.log(data);
       cb(data);
     });
   },

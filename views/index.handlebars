@@ -31,7 +31,7 @@
                   <h2>{{this.burger_name}}</h2>
                 </div>
                 <div class="col-xs-6">
-                  <form action="burgers/delete/{{this.id}}?_method=DELETE" method="POST">
+                  <form action="/burgers/delete/{{this.id}}?_method=DELETE" method="POST">
                     <button class="btn btn-danger" type="submit">DELETE!</button>
                   </form>
                 </div>
@@ -43,7 +43,7 @@
       </div>
       <div class="row bottom">
         <h1>Add a Burger</h1>
-        <form class="form-inline" action="burgers/create" method="POST">
+        <form class="form-inline" action="/burgers/create" method="POST">
           <div class="form-group">
             <label for="ca"><h4>Burger Name:</h4></label>
             <input type="text" id="ca" name="name" class="form-control" required>
