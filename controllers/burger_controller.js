@@ -16,8 +16,6 @@ router.get("/burgers", function(request, response) {
 });
 
 router.post("/burgers/create", function(request, response) {
-  console.log(request);
-  console.log(response);
   burger.insertOne("burger_name", request.body.name, function() {
     response.redirect("/burgers");
   });

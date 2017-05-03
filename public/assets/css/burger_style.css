@@ -1,18 +1,9 @@
-main {
-  background-image: url("../img/burger.png");
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
+body {
+  height: 100%;
+  background: url("../img/burger.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   color: white;
-}
-
-header {
-  background-image: url("../img/burger.png");
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-}
-
-footer {
-  background-image: url("../img/burger.png");
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
 }
