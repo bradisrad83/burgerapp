@@ -1,4 +1,5 @@
 var connection = require("./connection.js");
+var methodOverride = require("method-override");
 
 var orm = {
   selectAll: function(tableInput, cb) {

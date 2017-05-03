@@ -30,8 +30,6 @@ router.put("/burgers/update/devour/:id", function(request, response) {
 });
 
 router.delete("burgers/delete/:id", function(request, response) {
-  console.log(request);
-  console.log(response);
   burger.deleteOne("burgers", request.params.id, function() {
     response.redirect("/burgers");
   });

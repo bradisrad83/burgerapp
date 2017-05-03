@@ -5,7 +5,7 @@
     <div class="burger-container">
       <div class="row main">
         <div class="col-md-6 col-xs-12">
-          <h1>Freshly Made Burgers</h1>
+          <h1>Available Burgers</h1>
           {{#each burgers}}
             {{#unless this.devoured}}
               <div class="row burgers">
@@ -14,7 +14,7 @@
                 </div>
                 <div class="col-xs-3">
                   <form action="burgers/update/devour/{{this.id}}?_method=PUT" method="POST">
-                    <button class="btn btn-success" type="submit" style="float:right">DEVOUR!</button>
+                    <button class="btn btn-primary" type="submit" style="float:right">DEVOUR!</button>
                   </form>
                 </div>
               </div>
@@ -23,7 +23,7 @@
           {{/each}}
         </div>
         <div class="col-md-6 col-xs-12">
-          <h1>Devoured Burgers</h1>
+          <h1>Burgers That Have Been Devoured</h1>
           {{#each burgers}}
             {{#if this.devoured}}
               <div class="row burgers">
@@ -32,7 +32,7 @@
                 </div>
                 <div class="col-xs-6">
                   <form action="burgers/delete/{{this.id}}?_method=DELETE" method="POST">
-                    <button class="btn btn-danger btn-sm" type="submit">DELETE!</button>
+                    <button class="btn btn-danger" type="submit">DELETE!</button>
                   </form>
                 </div>
               </div>
