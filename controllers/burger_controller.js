@@ -1,29 +1,10 @@
-var express = require("express");
-var router = express.Router();
-var burger = require("../models/index.js");
-var methodOverride = require('method-override');
-var bodyParser = require('body-parser');
+var burger = require("../models/index.js")["Burger"];
 
-router.get("/burgers", function(request, response) {
-  response.render("index", {
-    burgers: data
+module.exports = function(app) {
+  app.get("/", function (req, res){
+    burger.findAll({}).then(function (dbburgers){
+      var burgerReturn = {burgers: dbburgers};
+      res.render("index", burgerReturn);
+    });
   });
-});
-
-router.post("/burgers/create", function(request, response) {
-  response.redirect("/burgers");
-});
-
-router.put("/burgers/update/devour/:id", function(request, response) {
-  response.redirect("/burgers");
-});
-
-router.delete("/burgers/delete/:id", function(request, response) {
-  response.redirect("/burgers");
-});
-
-router.use(function(request, response) {
-  response.redirect("/burgers");
-});
-
-module.exports = router;
+};
