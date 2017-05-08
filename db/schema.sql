@@ -1,12 +1,2 @@
-CREATE DATABASE burger_db;
-USE burger_db;
-
-CREATE TABLE burgers
-(
-  id int NOT NULL AUTO_INCREMENT,
-  burger_name VARCHAR(200) NOT NULL,
-  devoured BOOLEAN DEFAULT FALSE,
-  date_ts TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-  ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (id)
-);
+CREATE DATABASE burgers_db
+USE burgers_db;
